@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 
 using HarmonyLib;
 using UnityEngine;
@@ -13,7 +12,7 @@ namespace SuperRemote
 		{
 			Debug.Log("SuperRemote loaded");
 			var harmony = new Harmony(modEntry.Info.Id);
-			harmony.PatchAll(Assembly.GetExecutingAssembly());
+			harmony.PatchAll();
 			Debug.Log("SuperRemote patched things!");
 		}
 	}
@@ -21,18 +20,20 @@ namespace SuperRemote
 	[HarmonyPatch(typeof(LocomotiveRemoteController), "UpdateSignal")]
 	class LocomotiveRemoteController_UpdateSignal_Patch
 	{
-		static void Prefix(ref float ___signal)
+		static bool Prefix(ref float ___signal)
 		{
 			___signal = 1f;
+			return false;
 		}
 	}
 	// Forever set the battery to its max capacity
 	[HarmonyPatch(typeof(LocomotiveRemoteController), "UpdateSolarPanel")]
 	class LocomotiveRemoteController_UpdateSolarPanel_Patch
 	{
-		static void Prefix(ref LocomotiveRemoteController __instance)
+		static bool Prefix(ref LocomotiveRemoteController __instance)
 		{
 			__instance.battery = 1f;
+			return false;
 		}
 	}
 
