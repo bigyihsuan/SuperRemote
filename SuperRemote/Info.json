@@ -1,0 +1,8 @@
+{
+	"Id": "SuperRemote",
+	"DisplayName": "Super Remote",
+	"Author": "bigyihsuan",
+	"Version": "1.0.0",
+	"AssemblyName": "SuperRemote.dll",
+	"EntryMethod": "SuperRemote.Main.Load"
+}

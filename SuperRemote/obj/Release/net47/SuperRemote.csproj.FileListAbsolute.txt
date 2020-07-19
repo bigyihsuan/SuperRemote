@@ -1,0 +1,8 @@
+D:\Programming\GitHub Repos\SuperRemote\SuperRemote\bin\Release\net47\SuperRemote.dll
+D:\Programming\GitHub Repos\SuperRemote\SuperRemote\bin\Release\net47\SuperRemote.pdb
+D:\Programming\GitHub Repos\SuperRemote\SuperRemote\obj\Release\net47\SuperRemote.csprojAssemblyReference.cache
+D:\Programming\GitHub Repos\SuperRemote\SuperRemote\obj\Release\net47\SuperRemote.AssemblyInfoInputs.cache
+D:\Programming\GitHub Repos\SuperRemote\SuperRemote\obj\Release\net47\SuperRemote.AssemblyInfo.cs
+D:\Programming\GitHub Repos\SuperRemote\SuperRemote\obj\Release\net47\SuperRemote.csproj.CoreCompileInputs.cache
+D:\Programming\GitHub Repos\SuperRemote\SuperRemote\obj\Release\net47\SuperRemote.dll
+D:\Programming\GitHub Repos\SuperRemote\SuperRemote\obj\Release\net47\SuperRemote.pdb
