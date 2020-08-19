@@ -26,6 +26,7 @@ namespace SuperRemote
 			return false;
 		}
 	}
+	/*
 	// Forever set the battery to its max capacity
 	[HarmonyPatch(typeof(LocomotiveRemoteController), "UpdateSolarPanel")]
 	class LocomotiveRemoteController_UpdateSolarPanel_Patch
@@ -36,6 +37,16 @@ namespace SuperRemote
 			return false;
 		}
 	}
-
+	*/
+	[HarmonyPatch(typeof(LocomotiveRemoteController), "UpdateBatteryCharging")]
+	class LocomotiveRemoteController_UpdateBatteryCharging
+	{
+		static bool Prefix(ref LocomotiveRemoteController __instance)
+		{
+			__instance.battery = 1f;
+			__instance.batteryBar.UpdateValue(__instance.battery);
+			return false;
+		}
+	}
 
 }
